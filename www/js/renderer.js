@@ -5,18 +5,22 @@ export default class Renderer  {
 
 	static init() {
 
-		Renderer.instance = new THREE.WebGLRenderer({ antialias: true });
-		Renderer.instance.depth = App.far;
-		Renderer.instance.setClearColor(App.ambient_color, 1);
-		Renderer.instance.shadowMap.enabled = true;
-		Renderer.instance.shadowMap.type = THREE.PCFShadowMap;
-		Renderer.instance.shadowMapBias = 0.00001;
-		Renderer.instance.shadowMapDarkness = 0.5;
-		Renderer.instance.shadowMapWidth = 128;
-		Renderer.instance.shadowMapHeight = 128;
-		Renderer.instance.domElement.id = "canvas";
-		Renderer.instance.setClearColor(App.ambient_color, 1);
-		document.body.appendChild(Renderer.instance.domElement);
+		var renderer = new THREE.WebGLRenderer({ antialias: true });
+			renderer.depth = App.far;
+			renderer.setClearColor(App.ambient_color, 1);
+			renderer.shadowMap.enabled = true;
+			renderer.shadowMap.type = THREE.PCFShadowMap;
+			renderer.shadowMapBias = 0.00001;
+			renderer.shadowMapDarkness = 0.5;
+			renderer.shadowMapWidth = 128;
+			renderer.shadowMapHeight = 128;
+			renderer.domElement.id = "canvas";
+			renderer.setClearColor(App.ambient_color, 1);
+			renderer.gammaInput = true;
+			renderer.gammaOutput = true;
+		
+		document.body.appendChild(renderer.domElement);
+		Renderer.instance = renderer;
 	}
 
 	static resize() {
