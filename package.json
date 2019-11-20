@@ -1,0 +1,22 @@
+{
+  "name": "mob",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server/app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bequietsoft/mob.git"
+  },
+  "author": "OLeg",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bequietsoft/mob/issues"
+  },
+  "homepage": "https://github.com/bequietsoft/mob#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}

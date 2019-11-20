@@ -1,0 +1,1 @@
+nodemon ./server/app.js localhost 8080
