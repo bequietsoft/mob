@@ -58,7 +58,7 @@ GOTO MENU
 git init
 git add .
 git commit -m "0000"
-git remote add origin https://github.com/bequit/mob
+git remote add origin https://github.com/bequit/fart
 git push --set-upstream origin master
 ECHO.
 GOTO MENU

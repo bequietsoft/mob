@@ -1,1 +1,1 @@
-nodemon ./server/app.js localhost 8080
+nodemon ./server/app.js
